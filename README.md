@@ -5,8 +5,8 @@
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
 - [Tools Used](#tools-used)
-- [Imports](#imports)
-- [Data exploration, data cleaning, and model preparation](#Data-exploration-data-cleaning-and-model-preparation)
+- [Imports and Packages](#imports-and-packages)
+- [Data exploration data cleaning and model preparation](#Data-exploration-data-cleaning-and-model-preparation)
 - [Model Building](#model-building)
 - [Visualizations for model assessment](#visualizations-for-model-assessment)
 - [Results and Considerations](#results-and-considerations)
@@ -28,7 +28,7 @@ The data for this activity includes survey responses from 129,880 airline custom
 
   - Jupyter notebook [Download here](https://jupyter.org)
  
-### Imports/Packages
+### Imports and Packages
 The imports packages included:
 1.	Pandas 
 2.	Numpy 
@@ -38,7 +38,7 @@ The imports packages included:
 6.	Sklearn.metrics, and OneHotEncoder 
 7.	ProfileReport
 The above imports and packages were used to generate a quick report, preprocess, do EDA, build, visualize, and evaluate the model
-### Data exploration, data cleaning, and model preparation
+### Data exploration data cleaning and model preparation
 #### Prepare the data
 After loading the dataset, I prepared the data to be suitable for a logistic regression model. The steps included:
 1. Exploring the data
@@ -60,9 +60,30 @@ After loading the dataset, I prepared the data to be suitable for a logistic reg
 6.	Predicted customer satisfaction given inflight entertainment and other independent variables
 7.	Considered the assumptions of the various models.  
 ### Visualizations for model assessment 
-1.	Correlation heatmap
-2.	Logistic regression plot
-3.	Confusion matrix diagram
+1.	#### Correlation heatmap
+
+  	![Correlation heatmap of features](https://github.com/mena88/Airline_Customer_Satisfaction_Predictor/assets/97759151/ff21d383-e50d-4446-b2fe-72da7611e374)
+  	The correlation heatmap above was used to visualize the correlation coefficient of the variables
+  	
+3.	#### Logistic regression plot
+
+  	![Regresion plot of satisfaction vs inflight entertaiment](https://github.com/mena88/Airline_Customer_Satisfaction_Predictor/assets/97759151/4d31b206-b981-4ab9-80e3-09404e73f4dc)
+
+  	The logistis regression plot above demonstrates a sigmoid curve, characteristic of logistic regression. The plot represents a monotonic relationship between 
+    satisfaction and inflight entertainment, as inflight entertainment rating increased so did the probability of the customers being satisfied.
+
+
+4.	#### Confusion matrix diagram
+
+  	![Confusion matrix daigram](https://github.com/mena88/Airline_Customer_Satisfaction_Predictor/assets/97759151/ff95eeb7-37aa-4153-898e-cb36f80bc4cc)
+
+   From our diagram of the total test set, our model had a true positve prediction of 17423 and true negative prediction of 13714 The value of the false positve 
+   prediction 
+   was 3925 while the false neagtive prediction was 3785
+   From our diagram, our model did well with identifying a significant amount of the customers who were satisfied and not satisfied.
+   The number of customers that were wrongly classified were not also too high, it made slightly more type 1 errors than type 2 errors.
+
+   
 ### Model Evaluation
 #### The following steps were taken
 1. Obtain parameter estimates (coefficients and intercepts)
@@ -86,8 +107,8 @@ After loading the dataset, I prepared the data to be suitable for a logistic reg
 6. Consider investing in building more advanced models that could yield better results
 
 ### References
-Google Advanced Data Analytics Course Resources
-Google
-StackOverflow
-StackUp
-ChatGPT
+1. Google Advanced Data Analytics Course Resources
+2. Google
+3. StackOverflow
+4. StackUp
+5. ChatGPT
